@@ -1,4 +1,6 @@
 # TypeScript Archetype
+[![Build Status](https://travis-ci.org/vitorsalgado/typescript-archetype.svg?branch=master)](https://travis-ci.org/vitorsalgado/typescript-archetype) 
+[![Coverage Status](https://coveralls.io/repos/github/vitorsalgado/typescript-archetype/badge.svg?branch=master)](https://coveralls.io/github/vitorsalgado/typescript-archetype?branch=master) 
 [![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest)
 
 Node.js archetype based on __TypeScript__.  
