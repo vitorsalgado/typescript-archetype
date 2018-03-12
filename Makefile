@@ -2,15 +2,22 @@ PROJECT := nodejs
 PROJECT_TEST := $(PROJECT).test
 DOCKER_IMAGE := $(PROJECT)
 BUILD := $$TRAVIS_BUILD_NUMBER
+VERSION=$$(node -p -e "require('./package.json').version")
 
 
 
 
-# Node.js related recipes
+# runners
 # ##################################################################################################
 
 dev:
 	npm run start:dev
+
+
+
+
+# test
+# ##################################################################################################
 
 test:
 	npm run test:all
@@ -25,8 +32,7 @@ test-docker:
 
 
 
-# Docker
-# Build, Tag and Push docker image to a registry
+# docker
 # ##################################################################################################
 
 docker: docker-build docker-push docker-cleanup
