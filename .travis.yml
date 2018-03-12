@@ -1,0 +1,21 @@
+language: node_js
+
+sudo: required
+
+services:
+  - docker
+
+before_script:
+  - snyk auth ${SNYK_TOKEN} -d
+  - snyk protect
+  - npm run security:check
+
+script:
+  - make test
+  - make docker-build
+  - make docker-cleanup
+
+after_script:
+  - codeclimate-test-reporter < reports/coverage/lcov.info
+  - npm run coveralls
+  - snyk monitor

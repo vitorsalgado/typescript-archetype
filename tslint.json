@@ -1,0 +1,9 @@
+{
+  "extends": ["tslint:recommended", "tslint-sonarts"],
+  "rules": {
+    "indent": [true, "tabs"],
+    "quotemark": [true, "single", "avoid-escape"],
+    "no-null-keyword": true,
+    "trailing-comma": false
+  }
+}
